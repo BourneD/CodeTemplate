@@ -97,3 +97,10 @@ def post_process(resp):
 def not_found(error):
     return make_response(jsonify({'code': 1,
         'error': 'Not Found'}), 404)
+
+def main():
+    app.run(host='0.0.0.0', port=5000, threaded=True)
+
+
+if __name__ == '__main__':
+    main()
